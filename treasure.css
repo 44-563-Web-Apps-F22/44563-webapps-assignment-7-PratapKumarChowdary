@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Meie+Script|Shadows+Into+Light|Arvo|Monda');
-@import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 h1{
@@ -18,6 +17,12 @@ h1{
 .list{
     display: flex;
     padding-left: 350px;
+}
+
+.container{
+    position: absolute;
+    top: 40%;
+    left: 30%;
 }
 
 
