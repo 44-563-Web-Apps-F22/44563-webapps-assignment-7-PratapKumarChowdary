@@ -50,6 +50,12 @@
                     <p><i class="fa fa-light fa-circle-info"></i> Help report</p>
                 </div>
             </li>
+
+            <li class="list">
+                <div class="" id="newgame">
+                    <button type="button" onclick="newGame()" id="newgame" class="btn btn-secondary">New game</button>
+                </div>
+            </li>
         </ul>
     </center>
 
@@ -181,7 +187,9 @@
         var chestCount = 0;
         var score = 0;
         var lastCheck = 12;
-        var treasureLocation = 18;
+        var treasureLocation = Math.floor((Math.random() * (24 - 0 + 1) + 0));
+
+        console.log(treasureLocation)
 
         // var treasureLocation = Math.floor(Math.random() * 25)
         function check(position) {
@@ -244,6 +252,24 @@
                 document.getElementById("help").innerHTML = "sorry, no help available"
             }
 
+        }
+
+
+        function newGame(){
+        chestCount = 0
+        score = 0
+        treasureLocation = Math.floor((Math.random() * (24 - 0 + 1) + 0));
+        //var ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"];
+
+        document.getElementById("chests").innerHTML = "Number of chests checked is zero."
+        document.getElementById("score").innerHTML = "Score is unknown."
+
+    
+
+        for (var i = 0; i <= 24; i++) {
+            if(i != 12)
+                document.getElementById(ids[i]).src = "./treasure-chest.png"
+        }
         }
     </script>
 

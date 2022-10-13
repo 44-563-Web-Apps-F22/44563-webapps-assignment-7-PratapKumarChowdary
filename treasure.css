@@ -19,7 +19,9 @@ h1 {
 #instructions,
 #chests,
 #score,
-#help {
+#help,
+#newgame
+{
     font-family: Lato, sans-serif;
     font-weight: bold;
     font-size: 1.5vw;
@@ -59,7 +61,8 @@ h1 {
 
 #chests,
 #score,
-#help {
+#help
+{
     width: 400px;
     height: 50px;
     background: linear-gradient(#eff1f0, #f9fafc, #f4f5f7);
@@ -68,5 +71,16 @@ h1 {
     color: #1e107f;
     text-align: center;
     padding: 10px 16px;
+
+}
+#newgame {
+    width: 400px;
+    height: 50px;
+    background: linear-gradient(#eff1f0, #f9fafc, #f4f5f7);
+    border-radius: 50px;
+    float: center;
+    color: #1e107f;
+    text-align: center;
+    padding: 0px 2px;
 
 }

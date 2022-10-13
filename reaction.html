@@ -28,6 +28,9 @@
   <script>
     var myTime = undefined;
 
+    startCount = Math.floor(Math.random() * 8) + 2
+
+
 
     function recordReact() {
 
@@ -39,7 +42,7 @@
 
     function startTime() {
       myTime = undefined
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < startCount; i++) {
         setTimeout(() => {
           document.getElementById("countdown").innerHTML = "Count: " + i
         }, (3 - i) * 1000)
