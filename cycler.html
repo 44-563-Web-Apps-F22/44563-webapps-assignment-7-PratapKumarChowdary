@@ -50,7 +50,10 @@
 		<input type="text" name="input1" id="input1">
 	</div>
 
+	<br>
 	<button onclick="makeNewDiv()">Add Value</button>
+	<button onclick="get()">Get</button>
+	<button onclick="spin()">Spin</button>
 
 
 </body>
@@ -58,7 +61,7 @@
 	function makeNewDiv() {
 		/* make the div and its text */
 
-		
+
 		let element = document.createElement("div")
 		element.innerHTML = document.getElementById("input1").value
 		element.style.color = "orange"
@@ -67,8 +70,32 @@
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
-
 	}
+
+	function get() {
+		var cyclerItems = []
+		cyclerItems = document.getElementsByClassName("cycler")
+		itemsLength = cyclerItems.length
+		if(cyclerItems.length > 0)
+			cyclerItems[itemsLength - 1].remove()
+	}
+
+		function spin() {
+			var cyclerItems = []
+			cyclerItems = document.getElementsByClassName("cycler")
+			length = cyclerItems.length
+			if (length > 1) {
+				removedItem = document.createElement("div")
+				removedItem.innerHTML = cyclerItems[length - 1].textContent
+				removedItem.style.color = "white"
+				removedItem.style.backgroundColor = "#"+(0).toString(16)+(0).toString(16)+(139).toString(16);
+				removedItem.className = "cycler"
+				cyclerItems[length - 1].remove()
+				document.getElementById("target").insertBefore(removedItem, cyclerItems[0])
+			}
+		}
+
+	
 </script>
 
 </html>

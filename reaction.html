@@ -12,18 +12,18 @@
 </head>
 
 <body>
-
-  <h2>reaction timer by Yudu Eswar Vinay Pratap Kumar Kuchi</h2>
-
-
-  <p id="target">Your time</p>
-  <p id="countdown">Count</p>
+  <center>
+    <h2>reaction timer by Yudu Eswar Vinay Pratap Kumar Kuchi</h2>
 
 
+    <p id="target">Your time</p>
+    <p id="countdown">Count</p>
 
-  <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
-  <button type="button" class="btn btn-primary" onclick="recordReact()">React Now</button>
 
+
+    <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
+    <button type="button" class="btn btn-success" onclick="recordReact()">React Now</button>
+  </center>
 
   <script>
     var myTime = undefined;
@@ -52,6 +52,7 @@
         }
         else {
           var buttonTime = Date.now()
+          //computing time difference
           var elapsed_time = (buttonTime - myTime)
           document.getElementById("target").innerHTML = "Time was " + elapsed_time
         }
