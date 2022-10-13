@@ -99,21 +99,21 @@
 		function swap() {
 		var cyclerItems = []
 		cyclerItems = document.getElementsByClassName("cycler")
-		length = cyclerItems.length
-		swapEle = Math.floor(Math.random() * (length - 1))
-		swapEle2 = Math.floor(Math.random() * (length - 1))
+		itemLength = cyclerItems.length
+		swapEle = Math.floor(Math.random() * (itemLength - 1))
+		swapEle2 = Math.floor(Math.random() * (itemLength - 1))
 
 		if(swapEle == swapEle2)
 			swapEle2 = swapEle2 + 1
 		
-		if(length == 2) {
+		if(itemLength == 2) {
 			swapItem = document.createElement("div")
 			swapItem.innerHTML = cyclerItems[1].textContent
 			swapItem.style.color = "green"
 			swapItem.className = "cycler"
 			cyclerItems[1].remove()
 			document.getElementById("target").insertBefore(swapItem, cyclerItems[0])
-		} else if(length > 2) {
+		} else if(itemLength > 2) {
 			swapItem1 = document.createElement("div")
 			swapItem1.innerHTML = cyclerItems[swapEle].textContent
 			swapItem1.style.color = "green"
